@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Checkpoint4</title>
+</head>
+
+<body>
+  <main>
+    <div class="container-fluid">
+      <div id="" class="row text-end"> <!---NOTE ADD BACK img-body id-->
+        <div id="weather">
+          <!-- <h4>weather</h4>
+          <h6>location</h6> -->
+        </div>
+      </div>
+      <div class="row row-size">
+        <div class="col-md-3 d-flex align-items-end">
+          <div>
+            Image info
+          </div>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <div class="text-center">
+            <div id="clock" class="clock"></div>
+            <h3>Good Morning, Name</h3>
+            <h5>What is your main focus for today</h5>
+            <h6>form to type your main focus</h6>
+          </div>
+        
+          <div id="quote" class="my-5">
+            <!-- <h6>
+              Quote
+            </h6> -->
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-end justify-content-end">
+          <div class="todo-card border rounded bg-dark elevation-2 bg-dark text-light selectable no-select">
+            <h4 class="text-center">
+              To Do List 4/5
+            </h4>
+            <div id="tasks">
+              <!-- NOTE task template -->
+            </div>
+            <form onsubmit="app.tasksController.createTask()">
+              <input class="form-control" type="text" name="description" id="description" value="">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" ></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

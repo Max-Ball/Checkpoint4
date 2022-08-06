@@ -1,0 +1,13 @@
+
+.row-size{
+  height: 93vh;
+}
+
+.clock{
+  font-size: 6em;
+}
+
+.todo-card{
+  height: 20em;
+  width: 20em;
+}
