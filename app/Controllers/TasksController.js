@@ -6,6 +6,12 @@ function _draw(){
   let template = ''
   ProxyState.tasks.forEach(t => template += t.Template)
   document.getElementById('tasks').innerHTML = template
+  document.getElementById('task-header').innerHTML = `
+    <h4 class="text-center">
+      To Do List ${ProxyState.tasks.filter(t => t.completed).length}/${ProxyState.tasks.length}
+    </h4>
+    
+  `
 }
 
 export class TasksController{

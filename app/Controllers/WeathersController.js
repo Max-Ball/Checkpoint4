@@ -4,7 +4,15 @@ import { Pop } from "../Utils/Pop.js";
 
 
 function _draw(){
-  document.getElementById('weather').innerHTML = ProxyState.weather.weatherTemplate
+  let weather = ProxyState.weather.temp
+    let c = weather - 273
+    let f = c * (9/5) + 32
+    let fahrenheit = Math.floor(f)
+  document.getElementById('weather').innerHTML = `
+      <h4>${fahrenheit}</h4>
+      <h6>${ProxyState.weather.name}</h6>
+    
+  `
 }
 export class WeathersController{
   constructor(){

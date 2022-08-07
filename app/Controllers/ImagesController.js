@@ -2,9 +2,9 @@ import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 import { Pop } from "../Utils/Pop.js";
 
-// function _draw(){
-//   document.getElementById('img-body').innerHTML = ProxyState.image.imgTemplate
-// }
+function _draw(){
+  document.getElementById('img-body').innerHTML = ProxyState.image.imgTemplate
+}
 
 function _drawClock(){
   let time = new Date().toLocaleTimeString('en-US')
@@ -13,7 +13,7 @@ function _drawClock(){
 
 export class ImagesController{
   constructor(){
-    // ProxyState.on('image', _draw)
+    ProxyState.on('image', _draw)
     this.getImages()
     setInterval(_drawClock, 1000)
   }

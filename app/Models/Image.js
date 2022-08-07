@@ -9,7 +9,7 @@ export class Image{
   get imgTemplate(){
     console.log('getting here?');
     return `
-    <img src="${this.largeImgUrl}" alt="" srcset="">
+    <img class="img-2" src="${this.largeImgUrl}" alt="" srcset="">
     `
   }
 }
