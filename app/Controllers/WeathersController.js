@@ -15,6 +15,14 @@ export class WeathersController{
     this.getWeather()
   }
 
+  getKelvin(){
+    document.getElementById('weather').innerHTML = `
+      <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
+      <h3 class="selectable no-select" onclick="app.weathersController.draw()"> ${ProxyState.weather.temp}° K </h3>
+      <h5>${ProxyState.weather.description}
+      <h6>${ProxyState.weather.name}</h6>
+      `
+  }
   changeTemp(){
     console.log('getting here?');
     let weather = ProxyState.weather.temp
@@ -23,8 +31,10 @@ export class WeathersController{
   
       console.log('how about here?');
       document.getElementById('weather').innerHTML = `
-      <h4 class="selectable no-select" onclick="app.weathersController.draw()">${c}° C</h4>
-      <h6>${ProxyState.weather.name}</h6>
+        <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
+        <h3 class="selectable no-select" onclick="app.weathersController.getKelvin()"> ${c}° F</h3>
+        <h5>${ProxyState.weather.description}
+        <h6>${ProxyState.weather.name}</h6>
       `
     }
   
@@ -35,7 +45,9 @@ export class WeathersController{
       let f = Math.floor(c * (9/5) + 32)
       
         document.getElementById('weather').innerHTML = `
-          <h4 class="selectable no-select" onclick="app.weathersController.changeTemp()">${f}° F</h4>
+          <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
+          <h3 class="selectable no-select" onclick="app.weathersController.changeTemp()"> ${f}° F</h3>
+          <h5>${ProxyState.weather.description}
           <h6>${ProxyState.weather.name}</h6>
         `
   }

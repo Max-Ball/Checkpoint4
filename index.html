@@ -27,9 +27,16 @@
         <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
           <div class="text-center">
             <div id="clock" class="clock"></div>
-            <h2 class="mt-3 mb-5">Good Morning, Max</h2>
+            <h2 class="mt-3 mb-5">
+              <span id="time-of-day">
+                Good Morning,
+              </span>
+              <span id="sign-in">
+                Max
+              </span>
+            </h2>
             <form class="mb-5" onsubmit="app.tasksController.createTask()">
-              <input class="form-control form-border" type="text" name="description" id="description" placeholder="What would you like to add to your to do list?" value="">
+              <input class="form-control form-border text-shadow text-light" type="text" name="description" id="description" placeholder="What would you like to add to your to do list?" value="">
             </form>
           </div>
           <div id="quote" class="my-5">
@@ -39,7 +46,12 @@
           </div>
         </div>
         <div class="col-md-3 text-end">
-          <div id="weather">
+          <div class="mb-3">
+            <button type="button" class="btn text-light text-shadow sign-in" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Sign in
+            </button>
+          </div>
+          <div id="weather" class="sign-in">
             <!-- <h4>weather</h4>
             <h6>location</h6> -->
           </div>
@@ -49,7 +61,7 @@
   </main>
 
 
-  <!-- NOTE Modal -->
+  <!-- NOTE Offcanvas -->
   <div class="offcanvas offcanvas-start  modal-style" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="task-header"></h5>
@@ -71,6 +83,29 @@
           </div>
         </div>
       </div> -->
+    </div>
+  </div>
+
+  <!-- NOTE Modal -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="mb-5" onsubmit="app.tasksController.signIn()">
+            <label for="name" class="form-label">Name:</label>
+            <input class="form-control form-border" type="text" name="name" id="name" value="">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Sign in</button>
+        </div>
+      </div>
     </div>
   </div>
 

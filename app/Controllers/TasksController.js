@@ -14,6 +14,7 @@ function _draw(){
   `
 }
 
+
 export class TasksController{
   constructor(){
     ProxyState.on('tasks', _draw)
@@ -64,6 +65,18 @@ export class TasksController{
       Pop.error(error)      
     }
   }
+  
+  signIn(){
 
+    // Working on localStorage - move names to ProxyState
+    let names = [] 
+
+    window.event.preventDefault()
+    let form = window.event.target
+    let newName = form.name.value
+    form.reset()
+
+    document.getElementById('sign-in').innerText = newName
+  }
 
 }

@@ -15,7 +15,7 @@
 
 .img-2{
   min-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 body {
@@ -42,6 +42,25 @@ body {
   border-color: white;
 }
 
+.form-border:focus{
+  border: none!important;
+}
+
+input:focus{
+  background-color: transparent!important;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-radius: 0%;
+  outline: none!important;
+}
+
+
+input::placeholder{
+  color: rgb(252, 244, 244)!important;
+}
+
 .text-shadow{
   text-shadow: 2px 2px 3px rgb(31, 29, 29);
 }
@@ -53,3 +72,8 @@ body {
   backdrop-filter: blur(2px)!important;
   border-bottom-right-radius: 10px;
 }
+
+*:focus{
+  outline: none!important;
+}
+
