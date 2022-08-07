@@ -35,8 +35,8 @@
                 Max
               </span>
             </h2>
-            <form class="mb-5" onsubmit="app.tasksController.createTask()">
-              <input class="form-control form-border text-shadow text-light" type="text" name="description" id="description" placeholder="What would you like to add to your to do list?" value="">
+            <form id="form" class="mb-5" onsubmit="app.tasksController.createTask()">
+              <input class="form-control form-border text-shadow text-light" event="show.bs.offcanvas" type="text" name="description" id="description" placeholder="What would you like to add to your to do list?" value="">
             </form>
           </div>
           <div id="quote" class="my-5">
@@ -51,7 +51,7 @@
               Sign in
             </button>
           </div>
-          <div id="weather" class="sign-in">
+          <div id="weather">
             <!-- <h4>weather</h4>
             <h6>location</h6> -->
           </div>

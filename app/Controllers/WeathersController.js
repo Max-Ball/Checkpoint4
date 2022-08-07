@@ -32,7 +32,7 @@ export class WeathersController{
       console.log('how about here?');
       document.getElementById('weather').innerHTML = `
         <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
-        <h3 class="selectable no-select" onclick="app.weathersController.getKelvin()"> ${c}° F</h3>
+        <h3 class="selectable no-select" onclick="app.weathersController.getKelvin()"> ${c}° C</h3>
         <h5>${ProxyState.weather.description}
         <h6>${ProxyState.weather.name}</h6>
       `
