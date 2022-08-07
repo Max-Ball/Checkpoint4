@@ -19,8 +19,8 @@ export class WeathersController{
     document.getElementById('weather').innerHTML = `
       <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
       <h3 class="selectable no-select" onclick="app.weathersController.draw()"> ${ProxyState.weather.temp}° K </h3>
+      <h4>${ProxyState.weather.name}</h4>
       <h5>${ProxyState.weather.description}
-      <h6>${ProxyState.weather.name}</h6>
       `
   }
   changeTemp(){
@@ -33,8 +33,8 @@ export class WeathersController{
       document.getElementById('weather').innerHTML = `
         <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
         <h3 class="selectable no-select" onclick="app.weathersController.getKelvin()"> ${c}° C</h3>
+        <h4 >${ProxyState.weather.name}</h4>
         <h5>${ProxyState.weather.description}
-        <h6>${ProxyState.weather.name}</h6>
       `
     }
   
@@ -47,8 +47,8 @@ export class WeathersController{
         document.getElementById('weather').innerHTML = `
           <img src="http://openweathermap.org/img/w/${ProxyState.weather.icon}.png" alt="">
           <h3 class="selectable no-select" onclick="app.weathersController.changeTemp()"> ${f}° F</h3>
+          <h4>${ProxyState.weather.name}</h4>
           <h5>${ProxyState.weather.description}
-          <h6>${ProxyState.weather.name}</h6>
         `
   }
 

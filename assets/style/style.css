@@ -1,4 +1,5 @@
 
+
 .row-size{
   height: 93vh;
 }
@@ -73,14 +74,13 @@ input::placeholder{
   border-bottom-right-radius: 10px;
 }
 
-*:hover{
-  outline: none!important;
-  background: transparent!important;
-}
 
 .temp:hover{
   background: none!important;
   outline: none!important;
-  
+}
+
+.margin{
+  margin-top: 8em;
 }
 
